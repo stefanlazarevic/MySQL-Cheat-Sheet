@@ -1,0 +1,77 @@
+div(class="flex flex-col flex-1")
+  h1(class="title") Select records
+  
+  div(class="code")
+    span(class="c") // Use 
+    span(class="i-n") \G 
+    span(class="c") at the end of query if you want column format style.
+
+  div(class="code")
+    div(class="c") // Select all records from table.
+    span(class="k") SELECT  
+    span(class="i") * 
+    span(class="k") FROM 
+    span(class="i") table_name;
+
+  div(class="code")
+    div(class="c") // Select specific column records from table.
+    span(class="k") SELECT  
+    span(class="i") column_name, column_name 
+    span(class="k") FROM 
+    span(class="i") table_name;
+
+  div(class="code")
+    div(class="c") // Select all columns for specific 
+      | 
+      a(href="#operators" class="link") operator
+      |  or 
+      | 
+      a(href="#operators" class="link") comparison functions
+    | 
+    span(class="k") SELECT  
+    span(class="i") * 
+    span(class="k") FROM 
+    span(class="i") table_name 
+    span(class="k") WHERE 
+    span(class="i") column_name operator value;
+    
+  div(class="code")
+    div(class="c") // Select records that match pattern.
+    span(class="k") SELECT  
+    span(class="i") * 
+    span(class="k") FROM 
+    span(class="i") table_name 
+    span(class="k") WHERE 
+    span(class="i") column_name 
+    span(class="k") LIKE 
+    a(href="likePattern" class="link") pattern;
+    
+  div(class="code")
+    div(class="c") // Select records that doesn't match pattern.
+    span(class="k") SELECT  
+    span(class="i") * 
+    span(class="k") FROM 
+    span(class="i") table_name 
+    span(class="k") WHERE 
+    span(class="i") column_name 
+    span(class="k") NOT LIKE 
+    a(href="likePattern" class="link") pattern;
+    
+  div(class="code")
+    div(class="c") // Order selected records.
+    span(class="k") SELECT  
+    span(class="i") * 
+    span(class="k") FROM 
+    span(class="i") table_name 
+    span(class="k") ORDER BY 
+    span(class="i") column_name [ 
+    span(class="k") ASC | DESC 
+    span(class='i') ]; 
+    span(class="c") // ASC (From A - Z - Default), DESC (FROM Z - A)
+    
+  div(class="code")
+    div(class="c") // Select records without duplicates
+    span(class="k") SELECT DISTINCT 
+    span(class="i") column_name 
+    span(class="k") FROM 
+    span(class="i") table_name;

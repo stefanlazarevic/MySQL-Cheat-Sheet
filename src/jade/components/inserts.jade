@@ -1,5 +1,7 @@
 div(class="flex flex-col flex-1")
-  h1(class="title") Inserts
+  h1(class="title") Record manipulation
+  
+  h2(class="subtitle") Insert record:
   
   div(class="code")
     div(class="c") // Insert all values in table.
@@ -14,3 +16,25 @@ div(class="flex flex-col flex-1")
     span(class="i") table_name (column_name, column_name, column_name, ...) 
     span(class="k") VALUES 
     span(class="i") (value1, value2, value3, ...);
+    
+  h2(class="subtitle") Update record:
+    
+  div(class="code")
+    div(class="c") // Update record;
+    span(class="k") UPDATE  
+    span(class="i") table_name  
+    span(class="k") SET 
+    span(class="i") column_name = 
+    span(class="i-n") new_data 
+    span(class="k") WHERE 
+    span(class="i") column_name = value;
+
+    h2(class="subtitle") Delete record:
+      
+  div(class="code")
+    div(class="c") // Delete record;
+    span(class="k") DELETE FROM   
+    span(class="i") table_name  
+    span(class="k") WHERE 
+    span(class="i") column_name = 
+    span(class="i") column_name = value;
