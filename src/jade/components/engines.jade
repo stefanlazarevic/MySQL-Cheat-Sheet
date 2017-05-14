@@ -1,0 +1,32 @@
+div(class="flex flex-col flex-1")
+  h1(class="title") Engines
+  
+  div(class="code")
+    div(class="c") // Show all available engines on MySQL Server.
+    div(class="k") SHOW ENGINES;
+    
+  div(class="code")
+    div(class="c") // Change table engine.
+    span(class="k") ALTER TABLE 
+    span(class="i") table_name 
+    span(class="k") TYPE 
+    span(class="i") = engine_name;
+
+  div(class="code")
+    div(class="t") InnoDB
+      | 
+      span(class="c") // Supports transactions, row-level locking, and foreign keys.
+      
+    div(class="t") MyISAM 
+      |  
+      span(class="c") // MyISAM storage engine.
+
+    div(class="t") MEMORY 
+      | 
+      span(class="c") // Hash based, stored in memory, useful for temporary tables.
+    
+    div(class="t") FEDERATED 
+      | 
+      span(class="c") // Federated MySQL storage engine.
+    
+    

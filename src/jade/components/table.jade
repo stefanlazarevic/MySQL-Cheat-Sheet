@@ -1,0 +1,91 @@
+div(class="flex flex-col flex-1")
+  h1(class="title") Table
+  
+  div(class="code")
+    div(class="c") // Show all tables inside selected database.
+    span(class="k") SHOW TABLES;
+    
+  div(class="code")
+    div(class="c") // Create table.
+    span(class="k") CREATE TABLE 
+    span(class="i") table_name 
+      | ( column_name 
+      a(href="#datatype" class="link") data_type
+      | 
+      a(href="#constraints" class="link")  constraint
+      | , column_name 
+      a(href="#datatype" class="link") data_type
+      | 
+      a(href="#constraints" class="link") constraint
+      | , ... )
+      | 
+      span(class="k") ENGINE 
+      | = engine_type 
+      | 
+      span(class="c") // Engine is optional.
+      | 
+      br 
+      | 
+      span(class="k") COMMENT 
+      | = engine_type; 
+      | 
+      span(class="c") // Comment is optional.
+      
+    div(class="code")
+      div(class="c") // Show all table columns.
+      span(class="k") DESCRIBE 
+      span(class="i") table_name;
+      
+    div(class="code")
+      div(class="c") // Show table informations.
+      span(class="k") SHOW TABLE STATUS LIKE 
+      span(class="i") 'table_name'
+      | 
+      span(class="w") \G
+      | 
+      span(class="c") // Quotes reqired 
+      
+    div(class="code")
+      div(class="c") // Rename table.
+      span(class="k") RENAME TABLE 
+      span(class="i") table_name 
+      span(class="k") TO 
+      span(class="i-n") table_name_new;
+      
+    div(class="code")
+      div(class="c") // Rename table column.
+      span(class="k") ALTER TABLE 
+      span(class="i") table_name 
+      span(class="k") CHANGE COLUMN 
+      span(class="i") column_name 
+      span(class="i-n") column_name_new 
+      a(href="#datatype" class="link") data_type;
+        
+    div(class="code")
+      div(class="c") // Insert new column.
+      span(class="k") ALTER TABLE 
+      span(class="i") table_name 
+      span(class="k") ADD COLUMN 
+      span(class="i") column_name  
+      a(href="#datatype" class="link") data_type 
+      span(class="i") [ 
+        span(class="k") FIRST | AFTER
+        |  ] existing_column;
+        
+    div(class="code")
+      div(class="c") // Drop column.
+      span(class="k") ALTER TABLE 
+      span(class="i") table_name 
+      span(class="k") DROP COLUMN 
+      span(class="i") column_name;
+      
+    div(class="code")
+      div(class="c") // Delete all records from table.
+      span(class="k") TRUNCATE 
+      span(class="i") table_name;
+      
+    div(class="code")
+      div(class="c") // Drop table. ( Destroy table )
+      span(class="k") DROP TABLE 
+      span(class="i") table_name;
+      

@@ -1,0 +1,111 @@
+div(id="types" class="flex flex-col flex-1")
+  h1(id="datatype" class="title") Data types
+  
+  div(class="code")
+    div(class="c") // n - length
+    h2(class="subtitle") Text types:
+    div(class="t") CHARACTER(n) 
+      | 
+      span(class="c") // Character string fixed n.
+      
+    div(class="t") VARCHAR(n) 
+      | 
+      span(class="c") // Character string max n. Can Store up to 255 characters.
+      
+    div(class="t") TEXT 
+      | 
+      span(class="c") // Holds a string with a maximum length of 65,535 characters.
+      
+    div(class="t") MEDIUMTEXT 
+      | 
+      span(class="c") // Holds a string with a maximum length of 16,777,215 characters.
+      
+    div(class="t") LONGTEXT 
+      | 
+      span(class="c") // Holds a string with a maximum length of 4,294,967,295 characters.
+      
+    div(class="t") BLOB
+      | 
+      span(class="c") // For BLOBs (Binary Large Objects). Holds up to 65,535 bytes of data.
+      
+    div(class="t") MEDIUMBLOB
+      | 
+      span(class="c") // For BLOBs (Binary Large Objects). Holds up to 16,777,215 bytes of data.
+      
+    div(class="t") LONGBLOB
+      | 
+      span(class="c") // For BLOBs (Binary Large Objects). Holds up to 4,294,967,295 bytes of data.
+    
+    div(class="t") ENUM(x, y, z, ... )
+      | 
+      span(class="c") // Let you enter a list of possible values. You can list up to 65535 values in an ENUM list.
+      
+    div(class="t") SET
+      | 
+      span(class="c") // Similar to ENUM except that SET may contain up to 64 list items and can store more than one choice.
+      
+    h2(class="subtitle") Number types:
+    div(class="t") SMALLINT
+      | 
+      span(class="c") // Integer numerical. -32,768 to +32,767
+      
+    div(class="t") INTEGER(n)
+      | 
+      span(class="n") or 
+      span(class="t") INT 
+      span(class="c") // Integer numerical. -2,147,483,648 to +2,147,483,647 
+      span(class="w") *
+        | 
+        span(class="c" title="The integer types have an extra option called UNSIGNED. Normally, the integer goes from an negative to positive value. Adding the UNSIGNED attribute will move that range up so it starts at zero instead of a negative number.") UNSIGNED
+              
+    div(class="t") BIGINT
+      | 
+      span(class="c") // Integer numerical. 
+        | 
+        span(title=" -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807" class="c") -2^63 to 2^63 - 1
+
+    div(class="t") DECIMAL(n, s)
+      | 
+      span(class="c") // Example: decimal(5,2) is a number that has 3 digits before the decimal and 2 digits after the decimal.
+
+    div(class="t") FLOAT
+      | 
+      span(class="c") // Approximate numerical. 
+      
+    div(class="t") DOUBLE
+      | 
+      span(class="c") // Approximate numerical.
+      
+    h2(class="subtitle") Date types:
+    div(class="t") DATE 
+      | 
+      span(class="c") // Stores year, month, and day values.
+      
+    div(class="t") TIME 
+      | 
+      span(class="c") // Stores hour, minute, and second values.
+      
+    div(class="t") TIMESTAMP 
+      | 
+      span(class="c") // Stores year, month, day, hour, minute, and second values.
+
+    div(class="t") YEAR
+      | 
+      span(class="c") // A year in two-digit or four-digit format.
+      
+    h2(class="subtitle") Uncategorized:
+    div(class="t") BOOLEAN 
+      | 
+      span(class="c") // Stores true or false.
+      
+    div(class="t") ARRAY 
+      | 
+      span(class="c") // A set-length and ordered collection of elements.
+
+    div(class="t") MULTISET 
+      | 
+      span(class="c") // A variable-length and unordered collection of elements.
+
+    div(class="t") XML 
+      | 
+      span(class="c") // Stores XML data.

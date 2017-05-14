@@ -1,0 +1,16 @@
+div(class="flex flex-col flex-1")
+  h1(class="title") Inserts
+  
+  div(class="code")
+    div(class="c") // Insert all values in table.
+    span(class="k") INSERT INTO 
+    span(class="i") table_name 
+    span(class="k") VALUES 
+    span(class="i") (value1, value2, value3, ...);
+    
+  div(class="code")
+    div(class="c") // Insert into specific columns;
+    span(class="k") INSERT INTO 
+    span(class="i") table_name (column_name, column_name, column_name, ...) 
+    span(class="k") VALUES 
+    span(class="i") (value1, value2, value3, ...);

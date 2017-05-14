@@ -1,0 +1,33 @@
+div(id="types" class="flex flex-col flex-1")
+  h1(id="constraints" class="title") Constraints
+  
+  div(class="code")
+    div(class="t") NOT NULL
+      | 
+      span(class="c") // Ensures that a column cannot have a NULL value.
+
+    div(class="t") UNIQUE
+      | 
+      span(class="c") // Ensures that all values in a column are different.
+      
+    div(class="t") PRIMARY KEY
+      | 
+      span(class="c") // A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table.
+      
+    div(class="t") FOREIGN KEY
+      | 
+      span(class="c") // Uniquely identifies a row/record in another table.
+      
+    div(class="t") CHECK
+      | 
+      span(class="c") // Ensures that all values in a column satisfies a specific condition.
+      
+    div(class="t") DEFAULT
+      | 
+      span(class="c") // Sets a default value for a column when no value is specified.
+      
+    div(class="t") INDEX
+      | 
+      span(class="c") // Use to create and retrieve data from the database very quickly.
+      
+    

@@ -1,0 +1,30 @@
+doctype
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title MySQL Cheat Sheet
+    link(rel="stylesheet" href="css/main.css")
+    
+  body
+    header
+      div(class="container")
+        h1
+          a(href="#") MySQL Cheat Sheet
+        
+    div(class="container")
+      div(class="flex flex-1")
+        div(class="flex flex-col flex-1 group")
+          include components/./database.jade
+          include components/./engines.jade
+          
+        div(class="flex flex-col flex-1 group")  
+          include components/./table.jade
+          include components/./inserts.jade
+          
+        div(class="flex flex-col flex-1 group")  
+          include components/./datatypes.jade
+          include components/./constraints.jade
+        
+        
